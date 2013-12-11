@@ -31,6 +31,8 @@ class Sifter
     property :first_name
     property :last_name
     property :email
+    property :issues_url
+    property :api_issues_url
 
   end
 
