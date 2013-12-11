@@ -28,6 +28,11 @@ fetch projects, issues, and milestones like so:
     issues = projects.first.issues
     milestones = projects.first.milestones
 
+You can now also fetch comments and attachemnts from issues.
+
+    comments = projects.first.issues.first.comments
+    attachments = projects.first.issues.first.comments.first.attachment_objs
+
 ## License
 
     The MIT License

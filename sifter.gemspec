@@ -6,11 +6,11 @@ Gem::Specification.new do |s|
   s.name        = "sifter"
   s.version     = Sifter::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["Adam Keys"]
-  s.email       = ["adam@nextupdate.com"]
-  s.homepage    = "http://github.com/nextupdate/sifter-ruby"
+  s.authors     = ["Adam Keys","Matthew Schoolmaster"]
+  s.email       = ["adam@nextupdate.com","schoolmaster@gmail.com"]
+  s.homepage    = "http://github.com/theschoolmaster/sifter-ruby"
   s.summary     = %q{Wrapper for the Sifter API}
-  s.description = %q{Query, fetch, create and modify issues stored in Sifter.}
+  s.description = %q{Query, fetch, create and modify issues stored in Sifter. Improved comment and attachment handling.}
 
   s.rubyforge_project = "sifter"
 
