@@ -23,8 +23,8 @@ class Sifter::Project < Hashie::Dash
       map { |i| Sifter::Issue.new(i) }
   end
 
-  # Fetch all the issues on this project. Returns an array of Sifter::Issue
-  # objects.
+  # Fetch all the detailed issues on this project. Returns an array of Sifter::DetailedIssue
+  # objects (complete with comments).
   def detailed_issues
     Sifter.
       get(api_issues_url).
@@ -48,6 +48,15 @@ class Sifter::Project < Hashie::Dash
       get(api_people_url).
       fetch("people", []).
       map { |p| Sifter::Person.new(p) }
+  end
+
+  # Fetch all the categories linked to this project. Returns an array of
+  # Sifter::Category objects.
+  def categories
+    Sifter.
+      get(api_categories_url).
+      fetch("categories", []).
+      map { |c| Sifter::Category.new(c) }
   end
 
 end

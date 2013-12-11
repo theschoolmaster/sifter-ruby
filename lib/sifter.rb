@@ -36,4 +36,12 @@ class Sifter
 
   end
 
+  # Wrapper around a category.
+  class Category < Hashie::Dash
+
+    property :name
+    property :issues_url
+    property :api_issues_url
+
+  end
 end
