@@ -23,6 +23,15 @@ class Sifter::Project < Hashie::Dash
       map { |i| Sifter::Issue.new(i) }
   end
 
+  # Fetch all the issues on this project. Returns an array of Sifter::Issue
+  # objects.
+  def detailed_issues
+    Sifter.
+      get(api_issues_url).
+      fetch("issues", []).
+      map { |i| Sifter::DetailedIssue.new(i['api_url']) }
+  end
+
   # Fetch all the milestones for this project. Returns an array of
   # Sifter::Milestone objects.
   def milestones
